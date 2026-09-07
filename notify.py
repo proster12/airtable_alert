@@ -10,6 +10,8 @@ bases = api.bases()
 for base in bases:
     print(base.id, base.name)
 
+print(os.environ["TABLE_ID"])
+
 table = api.table(
     os.environ["BASE_ID"],
     os.environ["TABLE_ID"]
