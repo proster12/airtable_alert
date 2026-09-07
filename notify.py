@@ -7,7 +7,7 @@ api = Api(os.environ["AIRTABLE_TOKEN"])
 
 table = api.table(
     os.environ["BASE_ID"],
-    "소비자 구매 관리"
+    os.environ["TABLE_ID"]
 )
 
 rows = table.all()
