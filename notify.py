@@ -6,7 +6,7 @@ import os
 api = Api(os.environ["AIRTABLE_TOKEN"])
 
 bases = api.bases()
- 
+
 for base in bases:
     print(base.id, base.name)
 
