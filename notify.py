@@ -5,6 +5,11 @@ import os
 # Airtable 연결
 api = Api(os.environ["AIRTABLE_TOKEN"])
 
+bases = api.bases()
+ 
+for base in bases:
+    print(base.id, base.name)
+
 table = api.table(
     os.environ["BASE_ID"],
     os.environ["TABLE_ID"]
