@@ -7,7 +7,7 @@ api = Api(os.environ["AIRTABLE_TOKEN"])
 
 for base in api.bases():
     print("BASE:", base.id, base.name)
- 
+
     try:
         schema = base.schema()
         for table in schema.tables:
